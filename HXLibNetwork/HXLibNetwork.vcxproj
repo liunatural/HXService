@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{304460BE-7598-462A-9D5D-47096DBD3EAF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HXLibNetwork</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HXLIBNETWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>HXLibNetwork.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;HXLIBNETWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\boost_1_62_0;..\include;..\zlib-1.2.11</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\boost_1_62_0\lib64-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Sensapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>HXLibNetwork.def</ModuleDefinitionFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+
+copy $(OutDir)$(TargetName).dll  $(ProjectDir)..\bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin\$(ConfigurationName)
+
+copy $(TargetPath) $(ProjectDir)..\bin
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin
+
+copy $(OutDir)$(TargetName).lib $(ProjectDir)..\lib\$(ConfigurationName)
+copy $(OutDir)$(TargetName).exp $(ProjectDir)..\lib\$(ConfigurationName)
+
+
+copy $(OutDir)$(TargetName).dll ..\..\..\Projects3rd\HXStreamingSuite\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).pdb ..\..\..\Projects3rd\HXStreamingSuite\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).lib ..\..\..\Projects3rd\HXStreamingSuite\Lib\$(ConfigurationName)
+copy $(ProjectDir)..\include\HXLibMessage.h ..\..\..\Projects3rd\HXStreamingSuite\Include
+copy $(ProjectDir)..\include\HXLibNetwork.h ..\..\..\Projects3rd\HXStreamingSuite\Include
+
+
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;HXLIBNETWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>HXLibNetwork.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;HXLIBNETWORK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\boost_1_62_0;..\include;..\zlib-1.2.11</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\boost_1_62_0\lib64-msvc-14.0</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Sensapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>HXLibNetwork.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName).dll    $(ProjectDir)..\..\Unreal\Engine\Binaries\Win64
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\..\Unreal\Engine\Binaries\Win64
+copy $(OutDir)$(TargetName).lib $(ProjectDir)..\..\Unreal\Engine\Source\ThirdParty\HengXinApi\lib\Win64
+copy $(ProjectDir)..\include\HXLibMessage.h $(ProjectDir)..\..\Unreal\Engine\Source\ThirdParty\HengXinApi\include
+copy $(ProjectDir)..\include\HXLibNetwork.h $(ProjectDir)..\..\Unreal\Engine\Source\ThirdParty\HengXinApi\include
+
+copy $(OutDir)$(TargetName).dll  $(ProjectDir)..\bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin\$(ConfigurationName)
+
+copy $(TargetPath) $(ProjectDir)..\bin
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin
+
+copy $(OutDir)$(TargetName).lib $(ProjectDir)..\lib\$(ConfigurationName)
+copy $(OutDir)$(TargetName).exp $(ProjectDir)..\lib\$(ConfigurationName)
+
+copy $(OutDir)$(TargetName).dll $(ProjectDir)..\..\..\ProjectThird\Reports\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\..\..\ProjectThird\Reports\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).lib $(ProjectDir)..\..\..\ProjectThird\Reports\Lib\$(ConfigurationName)
+copy $(ProjectDir)..\include\HXLibMessage.h $(ProjectDir)..\..\..\ProjectThird\Reports\Include
+copy $(ProjectDir)..\include\HXLibNetwork.h $(ProjectDir)..\..\..\ProjectThird\Reports\Include
+
+
+copy $(OutDir)$(TargetName).dll ..\..\..\ProjectThird\HXStreamingSuite\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).pdb ..\..\..\ProjectThird\HXStreamingSuite\Bin\$(ConfigurationName)
+copy $(OutDir)$(TargetName).lib ..\..\..\ProjectThird\HXStreamingSuite\Lib\$(ConfigurationName)
+copy $(ProjectDir)..\include\HXLibMessage.h ..\..\..\ProjectThird\HXStreamingSuite\Include
+copy $(ProjectDir)..\include\HXLibNetwork.h ..\..\..\ProjectThird\HXStreamingSuite\Include
+
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\HXLibMessage.h" />
+    <ClInclude Include="..\include\HXLibNetwork.h" />
+    <ClInclude Include="..\zlib-1.2.11\crc32.h" />
+    <ClInclude Include="..\zlib-1.2.11\deflate.h" />
+    <ClInclude Include="..\zlib-1.2.11\gzguts.h" />
+    <ClInclude Include="..\zlib-1.2.11\inffast.h" />
+    <ClInclude Include="..\zlib-1.2.11\inffixed.h" />
+    <ClInclude Include="..\zlib-1.2.11\inflate.h" />
+    <ClInclude Include="..\zlib-1.2.11\inftrees.h" />
+    <ClInclude Include="..\zlib-1.2.11\trees.h" />
+    <ClInclude Include="..\zlib-1.2.11\zconf.h" />
+    <ClInclude Include="..\zlib-1.2.11\zlib.h" />
+    <ClInclude Include="..\zlib-1.2.11\zutil.h" />
+    <ClInclude Include="HXLibAsioClient.h" />
+    <ClInclude Include="HXLibAsioServer.h" />
+    <ClInclude Include="HXLibConfigReader.h" />
+    <ClInclude Include="HXLibMessageQueue.h" />
+    <ClInclude Include="HXLibUtilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zlib-1.2.11\adler32.c" />
+    <ClCompile Include="..\zlib-1.2.11\compress.c" />
+    <ClCompile Include="..\zlib-1.2.11\crc32.c" />
+    <ClCompile Include="..\zlib-1.2.11\deflate.c" />
+    <ClCompile Include="..\zlib-1.2.11\gzclose.c" />
+    <ClCompile Include="..\zlib-1.2.11\gzlib.c" />
+    <ClCompile Include="..\zlib-1.2.11\gzread.c" />
+    <ClCompile Include="..\zlib-1.2.11\gzwrite.c" />
+    <ClCompile Include="..\zlib-1.2.11\infback.c" />
+    <ClCompile Include="..\zlib-1.2.11\inffast.c" />
+    <ClCompile Include="..\zlib-1.2.11\inflate.c" />
+    <ClCompile Include="..\zlib-1.2.11\inftrees.c" />
+    <ClCompile Include="..\zlib-1.2.11\trees.c" />
+    <ClCompile Include="..\zlib-1.2.11\uncompr.c" />
+    <ClCompile Include="..\zlib-1.2.11\zutil.c" />
+    <ClCompile Include="HXLibAsioClient.cpp" />
+    <ClCompile Include="HXLibAsioServer.cpp" />
+    <ClCompile Include="HXLibConfigReader.cpp" />
+    <ClCompile Include="HXLibMessageQueue.cpp" />
+    <ClCompile Include="HXLibNetwork.cpp" />
+    <ClCompile Include="HXLibUtilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HXLibNetwork.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

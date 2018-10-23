@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <Server>
+      <port>10001</port>
+	  <maxlinks>300</maxlinks>
+      <name>场景服务器1</name>
+    </Server>
+    <CenterServer>
+      <!--<ip>127.0.0.1</ip>-->
+      <!--<ip>192.168.90.214</ip>-->
+      <ip>47.95.200.44</ip>	  
+      <port>20002</port>
+      <name>中心服务器</name>	  
+    </CenterServer>
+</root>

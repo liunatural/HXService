@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <Server>
+      <port>20001</port>
+	  <maxlinks>300</maxlinks>
+      <name>server1</name>
+    </Server>
+    <DBServer>
+      <HostName>127.0.0.1</HostName>
+      <HostPort>3306</HostPort>
+      <Database>test</Database>
+      <UserName>root</UserName>
+      <Password>root</Password>	  
+    </DBServer>
+</root>
