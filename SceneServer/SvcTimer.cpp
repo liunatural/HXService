@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "SvcTimer.h"
 #include "protocol.h"
 

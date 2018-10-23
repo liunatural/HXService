@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "PlayerManager.h"
 #include <assert.h>
 

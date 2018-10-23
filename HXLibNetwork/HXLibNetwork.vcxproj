@@ -117,14 +117,9 @@
     <PostBuildEvent>
       <Command>
 
-copy $(OutDir)$(TargetName).dll  $(ProjectDir)..\bin\$(ConfigurationName)
-copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin\$(ConfigurationName)
-
-copy $(TargetPath) $(ProjectDir)..\bin
-copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin
-
-copy $(OutDir)$(TargetName).lib $(ProjectDir)..\lib\$(ConfigurationName)
-copy $(OutDir)$(TargetName).exp $(ProjectDir)..\lib\$(ConfigurationName)
+copy $(OutDir)$(TargetName).dll  $(ProjectDir)..\bin\
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)..\bin\
+copy $(OutDir)$(TargetName).lib $(ProjectDir)..\lib\
 
 
 copy $(OutDir)$(TargetName).dll ..\..\..\Projects3rd\HXStreamingSuite\Bin\$(ConfigurationName)

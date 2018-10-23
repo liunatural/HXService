@@ -30,9 +30,6 @@
     <ClInclude Include="..\include\protocol.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\hxlibconfigservice.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\ErrorMsg.h">
       <Filter>头文件</Filter>
     </ClInclude>

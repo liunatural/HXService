@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "HXLibNetwork.h"
 #include <vector>
 #include "../sharetest.h"
